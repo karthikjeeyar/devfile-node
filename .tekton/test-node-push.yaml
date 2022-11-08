@@ -14,7 +14,7 @@ metadata:
     build.appstudio.openshift.io/component: test-node
     pipelines.appstudio.openshift.io/type: build
   name: test-node-on-push
-  namespace: jephilli
+  namespace: jephilli-2
 spec:
   params:
   - name: git-url
