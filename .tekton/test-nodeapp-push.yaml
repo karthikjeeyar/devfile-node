@@ -11,7 +11,6 @@ metadata:
   labels:
     appstudio.openshift.io/application: test-application
     appstudio.openshift.io/component: test-nodeapp
-    build.appstudio.openshift.io/component: test-nodeapp
     pipelines.appstudio.openshift.io/type: build
   name: test-nodeapp-on-push
   namespace: jephilli
@@ -32,9 +31,16 @@ spec:
     name: docker-build
   workspaces:
   - name: workspace
-    persistentVolumeClaim:
-      claimName: appstudio
-    subPath: test-nodeapp-on-push-{{revision}}
+    volumeClaimTemplate:
+      metadata:
+        creationTimestamp: null
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+      status: {}
   - name: registry-auth
     secret:
       secretName: redhat-appstudio-registry-pull-secret
