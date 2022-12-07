@@ -11,8 +11,8 @@ metadata:
   creationTimestamp: null
   labels:
     appstudio.openshift.io/application: my-application
-    appstudio.openshift.io/component: nodejs
-    build.appstudio.openshift.io/component: nodejs
+    appstudio.openshift.io/component: test-nodeapp
+    build.appstudio.openshift.io/component: test-nodeapp
     pipelines.appstudio.openshift.io/type: build
   name: nodejs-on-pull-request
   namespace: karthik-jk
