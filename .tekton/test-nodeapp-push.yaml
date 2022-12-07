@@ -13,7 +13,7 @@ metadata:
     appstudio.openshift.io/component: test-nodeapp
     pipelines.appstudio.openshift.io/type: build
   name: test-nodeapp-on-push
-  namespace: jephilli
+  namespace: karthik-jk
 spec:
   params:
   - name: git-url
@@ -21,11 +21,11 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/karthik_jk/test-nodeapp:{{revision}}
+    value: quay.io/redhat-appstudio/user-workload:{{revision}}
   - name: dockerfile
-    value: Dockerfile
+    value: https://raw.githubusercontent.com/karthikjeeyar/test-nodeapp/main/Dockerfile
   - name: path-context
-    value: .
+    value: ./
   pipelineRef:
     bundle: quay.io/redhat-appstudio/hacbs-templates-bundle:latest
     name: docker-build
