@@ -10,10 +10,10 @@ metadata:
     pipelinesascode.tekton.dev/on-target-branch: '[main,master]'
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: app-1
-    appstudio.openshift.io/component: test-nodeapp-pcex
+    appstudio.openshift.io/application: test-app-2
+    appstudio.openshift.io/component: nodejs-app-3kbq
     pipelines.appstudio.openshift.io/type: build
-  name: test-nodeapp-pcex-on-pull-request
+  name: nodejs-app-3kbq-on-pull-request
   namespace: karthik-jk
 spec:
   params:
