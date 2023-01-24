@@ -7,7 +7,6 @@ metadata:
     pipelinesascode.tekton.dev/max-keep-runs: "3"
     pipelinesascode.tekton.dev/on-event: '[push]'
     pipelinesascode.tekton.dev/on-target-branch: '[main,master, appstudio-test-nodeapp-pcex]'
-  creationTimestamp: null
   labels:
     appstudio.openshift.io/application: test-app-2
     appstudio.openshift.io/component: nodejs-app-3kbq
