@@ -14,7 +14,7 @@ metadata:
     appstudio.openshift.io/component: test-app
     pipelines.appstudio.openshift.io/type: build
   name: test-app-on-pull-request
-  namespace: rorai-tenant
+  namespace: karthik-jk-tenant
 spec:
   params:
   - name: dockerfile
